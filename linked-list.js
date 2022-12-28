@@ -1,7 +1,7 @@
 class LinkedListNode {
   constructor(val, next) {
     this.value = val;
-    this.next = null;
+    this.next = next;
   }
 }
 
@@ -12,12 +12,11 @@ class LinkedList {
   }
 
   addToHead(val) {
-    // this.head = new LinkedListNode(val, this.head);
-    //console.log(`${this.head.next.value}`);
+    this.head = new LinkedListNode(val, this.head);
 
-    const newNode = new LinkedListNode(val, null);
+    /*     const newNode = new LinkedListNode(val, null);
     newNode.next = this.head;
-    this.head = newNode;
+    this.head = newNode; */
 
     this.length++;
   }
